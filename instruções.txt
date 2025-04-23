@@ -1,0 +1,17 @@
+>>git clone https://github.com/patriciavdelgado/StableDiffusion3.5.git
+
+(dentro da pasta StableDiffusion3.5)
+
+>>python -s -m venv .sd3.5
+
+>>.sd3.5\Scripts\activate.bat
+
+>>python -m pip install -r requirements.txt
+
+unzip pasta models e colocar no diretório StableDiffusion3.5
+
+run Stable Diffusion 3.5 medium:
+>>python sd3_infer.py --csv_folder SUIM_it1 --model models/sd3.5_medium.safetensors
+
+run Stable Diffusion 3.5 large:
+>>python sd3_infer.py --csv_folder SUIM_it1 --model models/sd3.5_large.safetensors

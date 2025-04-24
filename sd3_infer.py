@@ -621,7 +621,7 @@ def main(
                 if "prompt" not in df.columns:
                     print(f"Skipping {csv_file}: No 'prompt' column found.")
                     continue
-                prompts = df["prompt"].dropna().tolist()
+                prompts = ["a photography of " + prompt.strip() + " underwater" for prompt in df["prompt"].dropna()]
 
                 # Create a subdirectory for each CSV file's outputs
                 sanitized_csv_name = re.sub(r"[^\w\-\.]", "_", os.path.splitext(csv_file)[0])
